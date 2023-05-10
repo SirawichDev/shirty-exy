@@ -5,6 +5,7 @@
     "prettier"
   ],
   "rules": {
-    "prefer-const": "error"
+    "prefer-const": "error",
+    "sort-imports": "warn"
   }
 }
