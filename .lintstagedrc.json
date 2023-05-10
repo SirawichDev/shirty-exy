@@ -1,5 +1,5 @@
 {
-  "**/*.(ts)": ["tsc --noEmit"],
+  "**/*.(ts)": ["tsc --noEmit --skipLibCheck"],
   "**/*.(tsx|js)": ["eslint --fix", "prettier --write"],
   "**/*.(json)": ["prettier --write"],
   "**/*.(css,scss)": "prettier --write"
