@@ -8,5 +8,5 @@
     "prettier --write",
     "eslint"
   ],
-  "*.scss": "prettier --write"
+  "**/*.(css,scss)": "prettier --write"
 }
