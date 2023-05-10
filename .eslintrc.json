@@ -6,6 +6,7 @@
   ],
   "rules": {
     "prefer-const": "error",
-    "sort-imports": "warn"
+    "sort-imports": "warn",
+    "no-console": "warn"
   }
 }
