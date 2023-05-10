@@ -1,6 +1,5 @@
 import { useGLTF } from '@react-three/drei'
 import React, { FC } from 'react'
-import { GLTFResult } from '@/app/types'
 
 type ShirtProps = {
   [key: string]: unknown
