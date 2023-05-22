@@ -12,7 +12,7 @@ export const initialState: State = {
   colors: ['#F47932', '#ED2828', '#222AC9', '#225DB5', '#2B3FC7', '#23A0DE'],
   selectedColor: '',
   images: ['pw-1.png', 'py-1.png'],
-  selectedImage: '',
+  selectedImage: 'pw-1.png',
 }
 
 type Action =
