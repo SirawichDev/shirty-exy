@@ -1,4 +1,13 @@
 /** @type {import('tailwindcss').Config} */
+function withOpacity(variableName) {
+  return ({ opacityValue }) => {
+    if (opacityValue !== undefined) {
+      return `rgba(var(${variableName}), ${opacityValue})`
+    } else {
+      return `rgb(var(${variableName}))`
+    }
+  }
+}
 module.exports = {
   content: [
     './src/pages/**/*.{js,ts,jsx,tsx,mdx}',
@@ -7,6 +16,15 @@ module.exports = {
   ],
   theme: {
     extend: {
+      colors: {
+        light: withOpacity('--color-light'),
+        dark: withOpacity('--color-dark'),
+        accent: withOpacity('--color-accent'),
+      },
+      textColor: {
+        accent: withOpacity('--color-accent'),
+        body: withOpacity('--text-base'),
+      },
       backgroundImage: {
         'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
         'gradient-conic':
