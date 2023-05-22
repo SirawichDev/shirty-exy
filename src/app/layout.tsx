@@ -1,7 +1,9 @@
 import './globals.css'
-import { Inter } from 'next/font/google'
+import { RootProvider } from '@/app/store/root.context'
+import { Carter_One } from 'next/font/google'
+import React from 'react'
 
-const inter = Inter({ subsets: ['latin'] })
+const inter = Carter_One({ weight: '400', subsets: ['latin'] })
 
 export const metadata = {
   title: 'Exy Shirt',
@@ -15,7 +17,9 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={inter.className}>{children}</body>
+      <body className={inter.className}>
+        <RootProvider>{children}</RootProvider>
+      </body>
     </html>
   )
 }
