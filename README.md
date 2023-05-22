@@ -13,6 +13,8 @@
 - Jest testing (not started yet)
 - Husky
 
+## FYI
+- not support mobile version yet (but it will :3 )
 
 ### created by Sirawich Voungchuy
 
