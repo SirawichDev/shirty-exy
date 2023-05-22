@@ -6,6 +6,8 @@
   --foreground-rgb: 0, 0, 0;
   --background-start-rgb: 214, 219, 220;
   --background-end-rgb: 255, 255, 255;
+  --color-accent: 28, 32, 59;
+  --text-base: 107, 114, 128;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -16,8 +18,10 @@
   }
 }
 
-*, *:before, *:after {
-  -webkit-tap-highlight-color: rgba(0,0,0,0);
+*,
+*:before,
+*:after {
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
   -webkit-font-smoothing: antialiased;
   text-rendering: optimizeLegibility;
   -moz-osx-font-smoothing: grayscale;
@@ -40,4 +44,61 @@
 body {
   height: 100vh;
   color: rgb(var(--foreground-rgb));
+}
+
+canvas {
+  touch-action: none;
+}
+
+.content-blue {
+  font-size: 8rem;
+  text-shadow: 0 0 0 #0c2ffb, 0 0 0 #2cfcfd, 0 0 0 #fb203b, 0 0 0 #fefc4b;
+}
+
+.circ-pink {
+  height: 5rem;
+  width: 5rem;
+  position: absolute;
+  left: 400px;
+  background: #df3e55;
+  border-radius: 100%;
+  margin-bottom: 7vmin;
+  animation-name: bounce-7;
+  animation-timing-function: cubic-bezier(0.28, 0.84, 0.42, 1);
+  animation-duration: 2s;
+}
+
+.highlight-text {
+  animation: text-shadow 2s ease infinite;
+  font-weight: 900;
+}
+
+@keyframes text-shadow {
+  0% {
+    transform: translateY(0);
+    text-shadow: 0 0 0 #0c2ffb, 0 0 0 #2cfcfd, 0 0 0 #fb203b, 0 0 0 #fefc4b;
+  }
+
+  20% {
+    transform: translateY(-1em);
+    text-shadow: 0 0.125em 0 #0c2ffb, 0 0.25em 0 #2cfcfd, 0 -0.125em 0 #fb203b,
+      0 -0.25em 0 #fefc4b;
+  }
+
+  40% {
+    transform: translateY(0.5em);
+    text-shadow: 0 -0.0625em 0 #0c2ffb, 0 -0.125em 0 #2cfcfd,
+      0 0.0625em 0 #fb203b, 0 0.125em 0 #fefc4b;
+  }
+
+  60% {
+    transform: translateY(-0.25em);
+    text-shadow: 0 0.03125em 0 #0c2ffb, 0 0.0625em 0 #2cfcfd,
+      0 -0.03125em 0 #fb203b, 0 -0.0625em 0 #fefc4b;
+  }
+
+  80% {
+    transform: translateY(0);
+    text-shadow: 0 0 0 #0c2ffb, 0 0 0 #2cfcfd, 0 0 0 #fb203b, 0 0 0 #fefc4b;
+  }
 }
