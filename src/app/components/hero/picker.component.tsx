@@ -8,7 +8,6 @@ const Picker = () => {
     colors,
     selectedColor,
     images,
-    selectedImage,
     selectImage,
   } = useRoot()
   return (

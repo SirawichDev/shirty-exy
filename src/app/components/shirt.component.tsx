@@ -2,27 +2,14 @@ import { useRoot } from '@/app/store/root.context'
 import { Decal, useGLTF, useTexture } from '@react-three/drei'
 import { useFrame } from '@react-three/fiber'
 import { easing } from 'maath'
-import * as THREE from 'three/src/Three'
-import React, { FC, useEffect } from 'react'
-import { GLTF } from 'three/examples/jsm/loaders/GLTFLoader'
-
-declare global {
-  export type GLTFResult = GLTF & {
-    nodes: {
-      T_Shirt_male: THREE.Mesh
-    }
-    materials: {
-      ['lambert1']: THREE.MeshStandardMaterial
-    }
-  }
-}
+import React, { FC } from 'react'
 type ShirtProps = {
   [key: string]: unknown
 }
-
 const Shirt: FC<ShirtProps> = (props) => {
   const { selectedColor, selectedImage } = useRoot()
   const texture = useTexture(selectedImage)
+  // eslint-disable-next-line no-undef
   const { nodes, materials } = useGLTF('/shirty.glb') as unknown as GLTFResult
 
   useFrame((state, delta) => {

@@ -3,10 +3,9 @@ import Picker from '@/app/components/hero/picker.component'
 import Intro from '@/app/components/hero/intro.component'
 import { HOME_MODE } from '@/app/constant'
 import { useRoot } from '@/app/store/root.context'
-import { State } from '@/app/store/root.reducer'
 import React from 'react'
 import { Canvas, Vector3 } from '@react-three/fiber'
-import { Center, Environment, OrbitControls, Stage } from '@react-three/drei'
+import { Center, Environment, OrbitControls } from '@react-three/drei'
 import Shirt from '@/app/components/shirt.component'
 import ShirtBackdrop from '@/app/components/backdrop.component'
 
@@ -22,7 +21,7 @@ const HeroSection = () => {
         <div className={'absolute w-full h-full'}>
           <Canvas shadows camera={{ position, fov }} eventPrefix="client">
             <ambientLight intensity={0.4} />
-            <Environment preset={'studio'} />
+            <Environment preset={'city'} />
             <Camera>
               <Center>
                 <Shirt />
