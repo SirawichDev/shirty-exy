@@ -23,13 +23,11 @@ type ShirtProps = {
 const Shirt: FC<ShirtProps> = (props) => {
   const { selectedColor, selectedImage } = useRoot()
   const texture = useTexture(selectedImage)
-  const { nodes, materials } = useGLTF('/shirty.glb') as GLTFResult
+  const { nodes, materials } = useGLTF('/shirty.glb') as unknown as GLTFResult
 
   useFrame((state, delta) => {
     easing.dampC(materials.lambert1.color, selectedColor, 0.4, delta)
   })
-  console.log('🚀 ~ file: shirt.component.tsx:10 ~ materials:', materials)
-  console.log('🚀 ~ file: shirt.component.tsx:10 ~ nodes:', nodes)
   return (
     <group {...props} dispose={null}>
       <mesh

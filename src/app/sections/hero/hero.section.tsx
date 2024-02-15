@@ -22,7 +22,7 @@ const HeroSection = () => {
         <div className={'absolute w-full h-full'}>
           <Canvas shadows camera={{ position, fov }} eventPrefix="client">
             <ambientLight intensity={0.4} />
-            <Environment preset={'apartment'} />
+            <Environment preset={'studio'} />
             <Camera>
               <Center>
                 <Shirt />
