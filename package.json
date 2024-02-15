@@ -12,7 +12,7 @@
   },
   "dependencies": {
     "@heroicons/react": "^2.0.18",
-    "@react-three/drei": "^9.65.5",
+    "@react-three/drei": "^9.97.5",
     "@react-three/fiber": "^8.12.2",
     "@types/node": "18.16.0",
     "@types/react": "18.0.38",
